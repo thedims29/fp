@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SewaIn</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-4" href="#"><img class="logo" src="asset/logo-black.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">  <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link" href="/about.html">About Us</a>
+          <a class="nav-link" href="/price.html">Price List</a>
+          <a class="nav-link" href="/team.html">Team</a>
+          <a class="nav-link" href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+  
+    navLinks.forEach(link => {
+      link.addEventListener('mouseover', () => {
+        link.style.textDecoration = 'underline';
+      });
+      link.addEventListener('mouseout', () => {
+        link.style.textDecoration = 'none';
+      });
+    });
+  </script>
+
+
+  <section >
+
+    <div class="container">
+      <h2 class="text-center">Tarif Sewa Kendaraan</h2>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="pricing-table">
+            <h3 class="header">Avanza</h3>
+            <img src="asset/foto8.jpg" alt="" class="img-fluid">
+            <ul>
+              <li class="grey">Self Drive:
+                <br>• Rp 250.000 / 12 jam
+                <br>• Rp 300.000 / 24 jam</li>
+              <li>Mobil+Driver:
+                <br>• Rp 300.000 / 6 jam
+                <br>• Rp 350.000 / 12 jam
+                <br>• Rp 425.000 / 24 jam</li>
+              <li class="grey">Mobil+Driver+BBM:
+                <br>• Rp 325.000 / 4 jam
+                <br>• Rp 400.000 / 6 jam
+                <br>• Rp 500.000 / 12 jam
+                <br>• Rp 575.000 / 18 jam
+                <br>• Rp 600.000 / 24 jam</li>
+              <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pricing-table">
+            <h3 class="header">Innova Reborn</h3>
+            <img src="asset/foto2.jpg" alt="" class="img-fluid">
+            <ul>
+              <li class="grey">Self Drive:
+                <br>• Rp 550.000 / 12 jam
+                <br>• Rp 650.000 / 24 jam</li>
+              <li>Mobil+Driver:
+                <br>• Rp 575.000 / 4 jam
+                <br>• Rp 675.000 / 6 jam
+                <br>• Rp 725.000 / 12 jam
+                <br>• Rp 875.000 / Full Day</li>
+              <li class="grey">Mobil+Driver+BBM:
+                <br>• Rp 620.000 / 4 jam
+                <br>• Rp 740.000 / 6 jam
+                <br>• Rp 850.000 / 12 jam
+                <br>• Rp 1.025.000 / 24 jam</li>
+              <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pricing-table">
+            <h3 class="header">Fortuner VRZ</h3>
+            <img src="asset/foto7.jpg" alt="" class="img-fluid">
+            <ul>
+              <li class="grey">Self Drive:
+                <br>• Rp 1.175.000 / 12 jam
+                <br>• Rp 1.300.000 / 24 jam</li>
+              <li>Mobil+Driver:
+                <br>• Rp 1.225.000 / 6 jam
+                <br>• Rp 1.300.000 / 12 jam
+                <br>• Rp 1.475.000 / 24 jam</li>
+              <li class="grey">Mobil+Driver+BBM:
+                <br>• Rp 1.300.000 / 6 jam
+                <br>• Rp 1.450.000 / 12 jam
+                <br>• Rp 1.650.000 / 24 jam</li>
+              <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+  </section>
+
+
+  
+  
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 d-flex align-items-center flex-column">
+          <p>Info</p>
+          <p class="ms-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio dui. Maecenas eu augue eget nibh maximus pellentesque vitae quis leo.</p>
+        </div>
+        <div class="col-md-4 d-flex align-items-center flex-column">
+          <p>Contact</p>
+          <p class="ms-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio dui. Maecenas eu augue eget nibh maximus pellentesque vitae quis leo.</p>
+        </div>
+        <div class="col-md-4 d-flex align-items-center flex-column">
+          <p>Help</p>
+          <p class="ms-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio dui. Maecenas eu augue eget nibh maximus pellentesque vitae quis leo.</p>
+        </div>
+      </div>
+      <div class.row mt-4> <div class="col d-flex justify-content-between align-items-center border-top pt-3">
+          <p>&copy; 2021 Sewaln Indonesia</p>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
