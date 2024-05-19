@@ -96,6 +96,15 @@
     text-decoration: underline;
   }
 
+  .payment-logos {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .payment-logos img {
+    width: 50px;
+  }
+
   .pricing-table {
     background-color: #f9f9f9;
     padding: 20px;
