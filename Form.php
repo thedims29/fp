@@ -1,36 +1,48 @@
+<?php
+ 
+include "service/connect.php";
+
+if(isset($_POST["kirimpesan"])){
+  $name = $_POST["namaLengkap"];
+  $address = $_POST["alamatLengkap"];
+  $pickupArea = $_POST["areaPenjemputan"];
+  $carSelection = $_POST["jenisMobil"];
+  $phone = $_POST["noTelp"];
+  $email = $_POST["alamatEmail"];
+  $deliveryDate = $_POST["tanggalPengiriman"];
+  $deliveryTime = $_POST["jamPengiriman"];
+  $remarks = $_POST["keterangan"];
+
+  $sql = "INSERT INTO users (name, address, pickup_area, car_selection, phone, email, delivery_date, delivery_time, remarks)
+VALUES ('$name', '$address', '$pickupArea', '$carSelection', '$phone', '$email', '$deliveryDate', '$deliveryTime', '$remarks')";
+
+if($db->query($sql)) {
+    echo "Berhasil melakukan pemesanan";
+}else {
+  echo "Gagal melakukan pemesanan";
+}
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SewaIn</title>
+  <title>Form Pemesanan</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand ms-4" href="#"><img class="logo" src="asset/logo-black.png" alt=""></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ms-auto">  <a class="nav-link active" aria-current="page" href="/">Home</a>
-          <a class="nav-link" href="/about.html">About Us</a>
-          <a class="nav-link" href="/price.html">Price List</a>
-          <a class="nav-link" href="/team.html">Team</a>
-          <a class="nav-link" href="/contact.html">Contact</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-  
-  
-  <body >
+
+<?php
+include "layout/header.html";
+?>
     <div class="container" style="padding-top: 110px;">
         <h1>Form Pemesanan</h1>
 
-        <form action="#">
+        <form action="form.php" method="post">
             <div class="mb-3">
                 <label for="namaLengkap" class="form-label">Nama Lengkap *</label>
                 <input type="text" class="form-control" id="namaLengkap" required>
@@ -102,56 +114,16 @@
                 <textarea class="form-control" id="keterangan" rows="3"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">Kirim Pesanan</button>
+            <button type="submit" class="btn btn-primary" id="kirimpesan">Kirim Pesanan</button>
         </form>
     </div>
-  
 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 d-flex align-items-center flex-column">
-          <strong style="font-size: 20px;">Head Office</strong> 
-            <p class="ms-auto" style="margin-top: 10px;">Jl. Samping Gunung No. 48, Sinduharjo, Ngaglik, Sleman, Yogyakarta, Indonesia</p>
-        </div>
-        <div class="col-md-4 d-flex flex-column align-items-center">
-          <ul class="list-unstyled">
-              <strong style="font-size: 20px;">Contact</strong>
-            <li style="margin-top: 10px;">  
-              <p>Telp: <a href="tel:+628123456789" style="text-decoration: none; color: black;">+62 8123456789</a></p>
-              <p>Fax: <a href="tel:+628123456789" style="text-decoration: none; color: black;">+62 8123456789</a></p>
-              <p>Email: <a href="mailto:info@sewain.co.id" style="text-decoration: none; color: black;">info@sewain.co.id</a></p>
-            </li>
-          </ul>
-        </div>
-        
-        <div class="col-md-4 d-flex align-items-center flex-column">
-          <ul class="list-unstyled">
-            <strong style="font-size: 20px;">Payment Partner</strong> 
-              <div class="payment-logos" style="margin-top: 10px;">
-                <img src="asset/bri.png" alt="BRI">
-                <img src="asset/mandiri.png" alt="Mandiri">
-                <img src="asset/bca.png" alt="BCA">
-              </div>
-          </ul>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col d-flex justify-content-between align-items-center border-top pt-3">
-          <p>&copy; 2021 Sewaln Indonesia</p>
-          <a href="#">Sitemap</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  
-  
-  
-  
-  
+    <?php
+include "layout/footer.html";
+?>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  <script src="javascript.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="javascript.js"></script>
 
 </body>
 </html>
