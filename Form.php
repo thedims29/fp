@@ -1,28 +1,36 @@
 <?php
- 
-include "service/connect.php";
+// form.php
 
-if(isset($_POST["kirimpesan"])){
-  $name = $_POST["namaLengkap"];
-  $address = $_POST["alamatLengkap"];
-  $pickupArea = $_POST["areaPenjemputan"];
-  $carSelection = $_POST["jenisMobil"];
-  $phone = $_POST["noTelp"];
-  $email = $_POST["alamatEmail"];
-  $deliveryDate = $_POST["tanggalPengiriman"];
-  $deliveryTime = $_POST["jamPengiriman"];
-  $remarks = $_POST["keterangan"];
+// Connect to the database
+$conn = mysqli_connect("localhost", "root", "", "rental");
 
-  $sql = "INSERT INTO users (name, address, pickup_area, car_selection, phone, email, delivery_date, delivery_time, remarks)
-VALUES ('$name', '$address', '$pickupArea', '$carSelection', '$phone', '$email', '$deliveryDate', '$deliveryTime', '$remarks')";
-
-if($db->query($sql)) {
-    echo "Berhasil melakukan pemesanan";
-}else {
-  echo "Gagal melakukan pemesanan";
-}
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 
+// Get the form data
+$name = $_POST['namaLengkap'];
+$address = $_POST['alamatLengkap'];
+$pickup_area = $_POST['areaPenjemputan'];
+$car_selection = $_POST['jenisMobil'];
+$phone = $_POST['noTelp'];
+$email = $_POST['alamatEmail'];
+$delivery_date = $_POST['tanggalPengiriman'];
+$delivery_time = $_POST['jamPengiriman'];
+$remarks = $_POST['keterangan'];
+
+// Insert data into the database
+$sql = "INSERT INTO users (name, address, pickup_area, car_selection, phone, email, delivery_date, delivery_time, remarks)
+        VALUES ('$name', '$address', '$pickup_area', '$car_selection', '$phone', '$email', '$delivery_date', '$delivery_time', '$remarks')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "Data inserted successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
@@ -42,20 +50,20 @@ include "layout/header.html";
     <div class="container" style="padding-top: 110px;">
         <h1>Form Pemesanan</h1>
 
-        <form action="form.php" method="post">
+                <form action="form.php" method="post">
             <div class="mb-3">
                 <label for="namaLengkap" class="form-label">Nama Lengkap *</label>
-                <input type="text" class="form-control" id="namaLengkap" required>
+                <input type="text" class="form-control" id="namaLengkap" name="namaLengkap" required>
             </div>
 
             <div class="mb-3">
                 <label for="alamatLengkap" class="form-label">Alamat Lengkap *</label>
-                <textarea class="form-control" id="alamatLengkap" rows="3" required></textarea>
+                <textarea class="form-control" id="alamatLengkap" name="alamatLengkap" rows="3" required></textarea>
             </div>
 
             <div class="mb-3">
                 <label for="areaPenjemputan" class="form-label">Area Penjemputan</label>
-                <select class="form-select" id="areaPenjemputan" aria-label="Pilih area penjemputan">
+                <select class="form-select" id="areaPenjemputan" name="areaPenjemputan" aria-label="Pilih area penjemputan">
                     <option value="">Pilih area penjemputan</option>
                     <option value="Kota Yogyakarta">Kota Yogyakarta</option>
                     <option value="Sleman">Sleman</option>
@@ -67,7 +75,7 @@ include "layout/header.html";
 
             <div class="mb-3">
                 <label for="jenisMobil" class="form-label">Mobil</label>
-                <select class="form-select" id="jenisMobil" aria-label="Pilih Mobil yang disewa">
+                <select class="form-select" id="jenisMobil" name="jenisMobil" aria-label="Pilih Mobil yang disewa">
                     <option value="">Pilih Mobil yang disewa</option>
                     <option value="Daihatsu Ayla">Daihatsu Ayla</option>
                     <option value="Daihatsu Ayla Matic">Daihatsu Ayla Matic</option>
@@ -93,25 +101,27 @@ include "layout/header.html";
 
             <div class="mb-3">
                 <label for="noTelp" class="form-label">No Telp</label>
-                <input type="tel" class="form-control" id="noTelp">
+                <input type="tel" class="form-control" id="noTelp" name="noTelp">
             </div>
+
             <div class="mb-3">
                 <label for="alamatEmail" class="form-label">Alamat Email *</label>
-                <input type="email" class="form-control" id="alamatEmail">
+                <input type="email" class="form-control" id="alamatEmail" name="alamatEmail">
             </div>
+
             <div class="mb-3">
                 <label for="tanggalPengiriman" class="form-label">Tanggal Pengiriman *</label>
-                <input type="date" class="form-control" id="tanggalPengiriman" required>
+                <input type="date" class="form-control" id="tanggalPengiriman" name="tanggalPengiriman">
             </div>
 
             <div class="mb-3">
                 <label for="jamPengiriman" class="form-label">Jam Pengiriman *</label>
-                <input type="time" class="form-control" id="jamPengiriman" required>
+                <input type="time" class="form-control" id="jamPengiriman" name="jamPengiriman">
             </div>
 
             <div class="mb-3">
                 <label for="keterangan" class="form-label">Keterangan Untuk jenis sewa yang dipilih (Opsional)</label>
-                <textarea class="form-control" id="keterangan" rows="3"></textarea>
+                <textarea class="form-control" id="keterangan" name="keterangan" rows="3"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary" id="kirimpesan">Kirim Pesanan</button>
