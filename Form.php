@@ -6,28 +6,44 @@ $conn = mysqli_connect("localhost", "root", "", "rental");
 
 // Check connection
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    die("Connection failed: ". mysqli_connect_error());
 }
 
-// Get the form data
-$name = $_POST['namaLengkap'];
-$address = $_POST['alamatLengkap'];
-$pickup_area = $_POST['areaPenjemputan'];
-$car_selection = $_POST['jenisMobil'];
-$phone = $_POST['noTelp'];
-$email = $_POST['alamatEmail'];
-$delivery_date = $_POST['tanggalPengiriman'];
-$delivery_time = $_POST['jamPengiriman'];
-$remarks = $_POST['keterangan'];
+// Check if the form has been submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the form data
+    $name = $_POST['namaLengkap'];
+    $address = $_POST['alamatLengkap'];
+    $pickup_area = $_POST['areaPenjemputan'];
+    $car_selection = $_POST['jenisMobil'];
+    $phone = $_POST['noTelp'];
+    $email = $_POST['alamatEmail'];
+    $delivery_date = $_POST['tanggalPengiriman'];
+    $delivery_time = $_POST['jamPengiriman'];
+    $remarks = $_POST['keterangan'];
 
-// Insert data into the database
-$sql = "INSERT INTO users (name, address, pickup_area, car_selection, phone, email, delivery_date, delivery_time, remarks)
-        VALUES ('$name', '$address', '$pickup_area', '$car_selection', '$phone', '$email', '$delivery_date', '$delivery_time', '$remarks')";
+    // Prepare the SQL statement
+    $sql = "INSERT INTO users (name, address, pickup_area, car_selection, phone, email, delivery_date, delivery_time, remarks)
+            VALUES (?,?,?,?,?,?,?,?,?)";
 
-if (mysqli_query($conn, $sql)) {
-    echo "Data inserted successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    // Prepare the statement
+    $stmt = mysqli_prepare($conn, $sql);
+
+    // Bind the parameters
+    mysqli_stmt_bind_param($stmt, "sssssssss", $name, $address, $pickup_area, $car_selection, $phone, $email, $delivery_date, $delivery_time, $remarks);
+
+    // Execute the statement
+    mysqli_stmt_execute($stmt);
+
+    // Check if the data was inserted successfully
+    if (mysqli_stmt_affected_rows($stmt) > 0) {
+        echo "Data inserted successfully";
+    } else {
+        echo "Error: ". $sql. "<br>". mysqli_error($conn);
+    }
+
+    // Close the statement
+    mysqli_stmt_close($stmt);
 }
 
 mysqli_close($conn);
