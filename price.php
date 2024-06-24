@@ -42,7 +42,6 @@ include "layout/header.html";
                 <br>• Rp 525.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Ayla.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -66,7 +65,6 @@ include "layout/header.html";
                 <br>• Rp 550.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Ayla Matic.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -90,7 +88,6 @@ include "layout/header.html";
                 <br>• Rp 600.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Brio.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -115,7 +112,6 @@ include "layout/header.html";
                 <br>• Rp 675.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Cityhatchback.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -139,7 +135,6 @@ include "layout/header.html";
                 <br>• Rp 675.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Raize.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -163,7 +158,6 @@ include "layout/header.html";
                 <br>• Rp 700.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/HRV.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -188,7 +182,6 @@ include "layout/header.html";
                 <br>• Rp 575.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Calya.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -212,7 +205,6 @@ include "layout/header.html";
                 <br>• Rp 575.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Avanza.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -236,7 +228,6 @@ include "layout/header.html";
                 <br>• Rp 600.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Avanza Facelift.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -261,7 +252,6 @@ include "layout/header.html";
                 <br>• Rp 625.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Veloz.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -285,7 +275,6 @@ include "layout/header.html";
                 <br>• Rp 575.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Rush.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -309,7 +298,6 @@ include "layout/header.html";
                 <br>• Rp 625.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Xpander.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -334,7 +322,6 @@ include "layout/header.html";
                 <br>• Rp 800.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Grand Inova.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -358,7 +345,6 @@ include "layout/header.html";
                 <br>• Rp 1.025.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Innova Reborn.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -382,7 +368,6 @@ include "layout/header.html";
                 <br>• Rp 1.200.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Innova Zenix.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -405,7 +390,6 @@ include "layout/header.html";
                 <br>• Rp 1.650.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Fortuner Vrz.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -427,7 +411,6 @@ include "layout/header.html";
                 <br>• Rp 1.650.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Pajero Sport.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
@@ -444,7 +427,6 @@ include "layout/header.html";
                 <br>• Rp 4.200.000 / 24 jam</li>
               <li><a href="https://wa.me/08123456789" class="btn btn-primary">Hubungi Whatsapp</a></li>
               <li><a href="Form.php" class="btn btn-primary">Pesan lewat Website</a></li>
-              <li><a href="detail/Alphard.html" class="btn btn-primary">Detail</a></li>
             </ul>
           </div>
         </div>
