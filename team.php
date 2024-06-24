@@ -37,7 +37,7 @@ include "layout/header.html";
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="team-member">
-            <img src="asset/tim3.jpg" alt="Team member 3">
+            <img src="asset/kevintampan.jpg" alt="Team member 3">
             <h3>Kevin</h3>
             <p>Marketing</p>
           </div>
