@@ -44,9 +44,9 @@ include "layout/header.html";
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="team-member">
-            <img src="asset/tim4.jpg" alt="Team member 4">
-            <h3>Asep</h3>
-            <p>Konsumsi</p>
+            <img src="asset/profil.jpg" alt="Team member 4">
+            <h3>Indra</h3>
+            <p>Manajemen</p>
           </div>
         </div>
       </div>
